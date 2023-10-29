@@ -23,9 +23,12 @@ void main(){
   
   vec2 c=u_resolution.xy/2.;
   
-  vec2 p0=c+vec2(0.,300.);
-  vec2 p1=c+vec2(300.,-300.);
-  vec2 p2=c+vec2(-300.,-300.);
+  float d0=50.*sin(u_time);
+  float d1=50.*sin(abs(u_time));
+  
+  vec2 p0=c+vec2(-d0,300.+d1);
+  vec2 p1=c+vec2(300.+d1*.5,-300.+d1);
+  vec2 p2=c+vec2(-300.-d1*.5,-300.+d1);
   
   if(in_triangle(a,p0,p1,p2)){
     gl_FragColor=vec4(1.);
