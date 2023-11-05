@@ -12,7 +12,7 @@ float fill(float d){
 float sSpiral(in vec2 p,in float turns){
   float r=dot(p,p);
   float a=atan(p.y,p.x);
-  float d=abs(sin(fract(log(r)*(turns/5.)+a*.159)));
+  float d=fract(log(r)*(turns/5.)+a*.159);
   return d-.5;
 }
 /* Shape 2D spiral */
