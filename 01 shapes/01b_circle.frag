@@ -12,7 +12,7 @@ void main() {
 
   vec2 c  = u_resolution.xy / 2.;
   float d = distance(xy, c);
-  float s = 1. - step(300., d);
+  float s = 1. - smoothstep(300., 306., d);
 
   gl_FragColor = vec4(s * st.x, s * st.y, s * sin(abs(u_time)), 1.0);
 
