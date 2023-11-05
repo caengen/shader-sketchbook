@@ -1,3 +1,4 @@
+// https://greentec.github.io/shadertoy-fire-shader-en/
 #ifdef GL_ES
 precision mediump float;
 #endif
