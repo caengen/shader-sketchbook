@@ -10,8 +10,7 @@ uniform sampler2D u_texture_0;
 #define timeScale u_time*1.
 #define fireMovement vec2(-.01,-.5)
 #define distortionMovement vec2(-.01,-.3)
-#define normalStrength 40.
-#define distortionStrength.01
+#define distortionStrength.005
 
 vec2 hash(vec2 p){
   p=vec2(dot(p,vec2(127.1,311.7)),
