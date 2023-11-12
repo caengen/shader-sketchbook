@@ -4,8 +4,6 @@
 precision mediump float;
 #endif
 
-#include "../tools/blinn_phong.fs"
-
 uniform vec2 u_resolution;
 uniform float u_time;
 
@@ -19,7 +17,7 @@ A normal texture is the normal vectors (perpendicular direction vectors of the s
 with the xyz components of the normal vectors mapped to the rgb components of the image.
 */
 void main(){
-  vec2 uv=gl_FragCoord.xy/u_resolution.xy;
+  vec2 uv=1.-gl_FragCoord.xy/u_resolution.xy;
   vec4 diffuse=texture2D(u_texture_1,uv,0.);
   vec4 normal=texture2D(u_texture_2,uv,0.);
   // map from [0,1] to [-1,1]
